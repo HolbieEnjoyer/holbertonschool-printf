@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include "main.h"
 
+extern unsigned int write_length;
 int _printf(const char *format, ...)
 {
     int i;
