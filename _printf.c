@@ -5,12 +5,13 @@
 
 int _printf(const char *format, ...)
 {
-    int i, len;
+    int i;
     
     va_list list;
     va_start(list, format);
+    write_length = 0;
     
-    for (i = 0, len = 0; format[i] != 0; i++) {
+    for (i = 0; format[i] != 0; i++) {
         char current = format[i];
         if (current == '%') {
         char c;
@@ -37,15 +38,13 @@ int _printf(const char *format, ...)
                     break;
             }
             
-            len++;
             continue;
         }
         
-        len++;
         _putchar(current);
     }
 
     va_end(list);
 
-    return len;
+    return write_length;
 }
