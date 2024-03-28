@@ -1,0 +1,17 @@
+#!/bin/bash
+# Check if the counter file exists
+if [ ! -f counter.txt ]; then
+    echo "0" > counter.txt  # If not, create it and set the counter to 0
+fi
+# Read the value of the counter from the file
+counter=$(<counter.txt)
+# Print the current value of the counter
+echo "$counter"
+# Update the counter: if it's 0, set it to 1; if it's 1, set it to 0
+if [ "$counter" -eq 0 ]; then
+    ./acommit
+    echo "1" > counter.txt
+else
+    ./fcommit
+    echo "0" > counter.txt
+fi
