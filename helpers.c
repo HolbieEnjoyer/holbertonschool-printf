@@ -4,8 +4,10 @@
 #include <limits.h>
 #include "main.h"
 
+extern unsigned int write_length;
 void _putchar(char c) {
     write(1, &c, 1);
+    write_length++;
 }
 
 void print_num(int num) {
