@@ -3,12 +3,12 @@
 #include <stdarg.h>
 #include "main.h"
 
-int _printf(const char *format, ...) {
-
+int _printf(const char *format, ...)
+{
+    int i;
+    
     va_list list;
     va_start(list, format);
-
-    int i;
 
     for (i = 0; format[i] != 0; i++) {
         char current = format[i];
