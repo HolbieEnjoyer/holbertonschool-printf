@@ -19,3 +19,13 @@ void print_num(int num) {
         _putchar('0' + (num % 10));
     }
 }
+
+void simple_print(const char* str)
+{
+	int i;
+
+	for (i = 0; str[i] != 0; i++)
+	{
+		_putchar(str[i]);
+	}
+}

@@ -8,7 +8,9 @@ int _printf(const char *format, ...) {
     va_list list;
     va_start(list, format);
 
-    for (int i = 0; format[i] != 0; i++) {
+    int i;
+
+    for (i = 0; format[i] != 0; i++) {
         char current = format[i];
         if (current == '%') {
             char c = format[++i];
@@ -19,9 +21,7 @@ int _printf(const char *format, ...) {
                     break;
                 case 's':
                     char* str = va_arg(list, char*);
-                    for (int j = 0; str[j] != 0; j++) {
-                        _putchar(str[j]);
-                    }
+                    simple_print(str);
                     break;
                 case 'd':
                     print_num(va_arg(list, int));
