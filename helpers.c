@@ -10,6 +10,11 @@ void _putchar(char c) {
     write_length++;
 }
 
+int _sign(int num)
+{
+    return num < 0 ? -1 : 1;
+}
+
 void print_num(int num) {
     
     if (num != 0) {
