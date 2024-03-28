@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
         if (current == '%') {
         char c;
 	    c = format[++i];
+	    if (c == 0)
+	        return write_length;
 
             switch (c) {
                 case 'c':
