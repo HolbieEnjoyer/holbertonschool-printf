@@ -26,8 +26,11 @@ int _printf(const char *format, ...)
                 case 'd':
                     print_num(va_arg(list, int));
                     break;
-                case 'u':
+                case 'i':
                     print_num(va_arg(list, int));
+                    break;
+                case 'u':
+                    print_num(va_arg(list, unsigned int));
                     break;
                 default:
                     _putchar(c);
