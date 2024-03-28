@@ -37,6 +37,8 @@ int _printf(const char *format, ...)
                     print_num(va_arg(list, unsigned int));
                     break;
                 default:
+                    if (c != '%')
+                        _putchar('%');
                     _putchar(c);
                     break;
             }
