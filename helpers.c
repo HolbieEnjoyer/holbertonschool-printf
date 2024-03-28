@@ -24,9 +24,10 @@ void print_num(int num) {
 
 void simple_print(const char* str)
 {
+	int i;
+
 	if (str == 0)
 		return;
-	int i;
 
 	for (i = 0; str[i] != 0; i++)
 	{
