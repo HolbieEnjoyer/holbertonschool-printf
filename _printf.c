@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
         char c;
 	    c = format[++i];
 	    if (c == 0)
-	        return write_length;
+	        return write_length == 0 ? -1 : write_length;
 
             switch (c) {
                 case 'c':
@@ -49,5 +49,5 @@ int _printf(const char *format, ...)
 
     va_end(list);
 
-    return write_length;
+    return write_length == 0 ? -1 : write_length;
 }
