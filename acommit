@@ -1,7 +1,0 @@
-#/bin/bash
-git config --global user.name "Atya22"
-git config --global user.email "aytaj2002eva@gmail.com"
-chmod -R +x .
-git add --all
-git commit -m "Next task"
-git push -u origin main
