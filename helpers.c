@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <limits.h>
+#include "main.h"
 
 void _putchar(char c) {
     write(1, &c, 1);
