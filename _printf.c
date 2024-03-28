@@ -13,15 +13,15 @@ int _printf(const char *format, ...) {
     for (i = 0; format[i] != 0; i++) {
         char current = format[i];
         if (current == '%') {
-            char c = format[++i];
+            char c;
+	    c = format[++i];
 
             switch (c) {
                 case 'c':
                     _putchar((char)va_arg(list, int));
                     break;
                 case 's':
-                    char* str = va_arg(list, char*);
-                    simple_print(str);
+                    simple_print(va_arg(list, char*));
                     break;
                 case 'd':
                     print_num(va_arg(list, int));
