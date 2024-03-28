@@ -28,13 +28,13 @@ int _printf(const char *format, ...)
                     simple_print(va_arg(list, char*));
                     break;
                 case 'd':
-                    print_num(va_arg(list, int));
+                    printnum_full(va_arg(list, int));
                     break;
                 case 'i':
-                    print_num(va_arg(list, int));
+                    printnum_full(va_arg(list, int));
                     break;
                 case 'u':
-                    print_num(va_arg(list, unsigned int));
+                    printnum_full(va_arg(list, unsigned int));
                     break;
                 default:
                     if (c != '%')

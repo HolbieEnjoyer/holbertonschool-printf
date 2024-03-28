@@ -22,6 +22,14 @@ void print_num(int num) {
     }
 }
 
+void printnum_full(int num)
+{
+    if (num == 0)
+        _putchar('0');
+    else
+        print_num(num);
+}
+
 void simple_print(const char* str)
 {
 	int i;
