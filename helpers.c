@@ -27,7 +27,10 @@ void simple_print(const char* str)
 	int i;
 
 	if (str == 0)
+	{
+		simple_print("(null)");
 		return;
+	}
 
 	for (i = 0; str[i] != 0; i++)
 	{
