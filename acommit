@@ -1,5 +1,4 @@
 #/bin/bash
-git config --global pull.ff only
 git config --global user.name "Atya22"
 git config --global user.email "aytaj2002eva@gmail.com"
 chmod -R +x .
