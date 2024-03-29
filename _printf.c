@@ -50,9 +50,10 @@ int _printf(const char *format, ...)
 		c = format[++i];
 		if (c == 0)
 			goto END_ZONE;
-			handle_print_cases(c, &list, &write_length);
-			continue;
-		}
+
+		handle_print_cases(c, &list, &write_length);
+		continue;
+	}
 
 		_putchar(current);
 	}
