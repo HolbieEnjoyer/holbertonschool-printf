@@ -3,29 +3,29 @@
 #include <stdarg.h>
 #include "main.h"
 
-void handle_print_cases(va_list *list)
+void handle_print_cases(va_list *list, int *wlen)
 {
 switch (c)
 {
 	case 'c':
-		_putchar((char) va_arg(*list, int));
+		_putchar((char) va_arg(*list, int), wlen);
 		break;
 	case 's':
-		simple_print(va_arg(*list, char *));
+		simple_print(va_arg(*list, char *), wlen);
 		break;
 	case 'd':
-		printnum_full(va_arg(*list, int));
+		printnum_full(va_arg(*list, int), wlen);
 		break;
 	case 'i':
-		printnum_full(va_arg(*list, int));
+		printnum_full(va_arg(*list, int), wlen);
 		break;
 	case 'u':
-		printnum_full(va_arg(*list, unsigned int));
+		printnum_full(va_arg(*list, unsigned int), wlen);
 		break;
 	default:
 		if (c != '%')
-			_putchar('%');
-		_putchar(c);
+			_putchar('%', wlen);
+		_putchar(c, wlen);
 		break;
 }
 }
@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 		c = format[++i];
 		if (c == 0)
 			goto END_ZONE;
-			handle_print_cases(&list);
+			handle_print_cases(&list, &write_length);
 			continue;
 		}
 
