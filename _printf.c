@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include "main.h"
 
-void handle_print_cases(va_list *list, int *wlen)
+void handle_print_cases(char c, va_list *list, int *wlen)
 {
 switch (c)
 {
@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 		c = format[++i];
 		if (c == 0)
 			goto END_ZONE;
-			handle_print_cases(&list, &write_length);
+			handle_print_cases(c, &list, &write_length);
 			continue;
 		}
 
