@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 		continue;
 	}
 
-		_putchar(current);
+		_putchar(current, &write_length);
 	}
 
 	va_end(list);
