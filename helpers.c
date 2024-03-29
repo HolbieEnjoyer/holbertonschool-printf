@@ -8,7 +8,7 @@ void _putchar(char c, int *wlen)
 {
 	write(1, &c, 1);
 	if (wlen != 0)
-		*wlen++;
+		(*wlen)++;
 }
 
 int _sign(int num)
