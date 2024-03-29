@@ -3,6 +3,12 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+ * handle_print_cases - handles the different print cases.
+ * @c: the print flag.
+ * @list: list of arguments.
+ * @wlen: external write length variable.
+ */
 void handle_print_cases(char c, va_list *list, int *wlen)
 {
 switch (c)
@@ -30,6 +36,11 @@ switch (c)
 }
 }
 
+/**
+ * _printf - Writes the formatted string to stdout.
+ * @format: String that contains the text to be written to stdout.
+ * Return: If successful, the total number of characters written is returned.
+ */
 int _printf(const char *format, ...)
 {
 	int i;
